@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Packages</title>
+  </head>
+  <body>
+    <h1>Available Packages</h1>
+    <ul>
+      {% for package in packages %}
+      <li>
+        <h2>{{ package.name }}</h2>
+        <p>{{ package.description }}</p>
+        <p>Price: {{ package.price }}</p>
+        <a href="{% url 'select_package' package.id %}">Buy Now</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
