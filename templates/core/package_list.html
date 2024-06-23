@@ -1,0 +1,17 @@
+<!-- templates/core/package_list.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Package List</title>
+  </head>
+  <body>
+    <h1>Available Packages</h1>
+    <ul>
+      {% for package in packages %}
+      <li>
+        {{ package.name }}: {{ package.description }} - ${{ package.price }}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

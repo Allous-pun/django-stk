@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Initiate Payment</title>
+  </head>
+  <body>
+    <h1>Initiate Payment for {{ package.name }}</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Pay</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+<h1>Initiate Payment</h1>
+<form method="post" action="{% url 'initiate_payment' %}">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Pay</button>
+</form>
